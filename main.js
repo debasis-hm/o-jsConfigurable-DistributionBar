@@ -1,1 +1,1 @@
-export { default } from './src/js/jsConfiurableDistrobar.js';
+export { default } from './src/js/jsConfiurableDistrobar';

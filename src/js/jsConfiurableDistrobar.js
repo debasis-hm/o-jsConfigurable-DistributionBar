@@ -110,7 +110,10 @@ function origamijsConfigurableDistro_bar(parms) {
 
 	};
 
-export default function (parms) {
-    let ojsConfigurableDistrobarobj = new origamijsConfigurableDistro_bar();
-    ojsConfigurableDistrobarobj.draw_DistroBar(parms);
-}
+ let ojsConfigurableDistrobarobj = new origamijsConfigurableDistro_bar();
+	export default function (parms) {
+		if(parms!= undefined){
+			   ojsConfigurableDistrobarobj.draw_DistroBar(parms);
+		}	   
+	 
+	}

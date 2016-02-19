@@ -17,7 +17,7 @@ gulp.task('verify', function() {
 });
 
 gulp.task('watch', function() {
-	gulp.watch('./client/**/*', ['verify', 'build']);
+	gulp.watch('./src/js/*', ['verify', 'build']);
 });
 
 gulp.task('default', ['verify', 'build', 'watch']);

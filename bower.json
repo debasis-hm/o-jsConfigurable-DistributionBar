@@ -1,25 +1,17 @@
 {
-  "name": "o-jsconfigurabledistrobar",
-  "version": "1.0.0",
-  "authors": [
-    "Satapathy",
-    "Debasis <Debasis.Satapathy@pearson.com>"
+    "name": "o-jsConfigurable-DistributionBar",
+    "version": "1.0.0",
+    "authors": [
+    "Debasis Satapathy <debasis.p.satapathy@happiestminds.com>"
   ],
-  "description": "Distrobar that can be configurable through js",
-  "main": "main.js",
-  "moduleType": [
-    "amd"
+    "description": "draw a distribution bar ",
+    "main": ["main.js","main.scss"],
+    "keywords": [
+    "graph"
   ],
-  "keywords": [
-    "Distrobar"
-  ],
-  "license": "MIT",
-  "homepage": "index.html",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+    "license": "MIT",
+    "homepage": "index.html",
+    "dependencies": {
+          
+    }
 }
