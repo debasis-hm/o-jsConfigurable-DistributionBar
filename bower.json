@@ -1,0 +1,25 @@
+{
+  "name": "o-jsconfigurabledistrobar",
+  "version": "1.0.0",
+  "authors": [
+    "Satapathy",
+    "Debasis <Debasis.Satapathy@pearson.com>"
+  ],
+  "description": "Distrobar that can be configurable through js",
+  "main": "main.js",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "Distrobar"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

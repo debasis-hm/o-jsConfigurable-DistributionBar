@@ -1,0 +1,99 @@
+.default-opbar{
+    width: 100%;
+	border:1px solid #AAA;
+	border-radius: 2px;
+	background-color : white;
+ 	overflow: hidden;
+ 	text-align: center; 
+ 	padding : 2px;	
+}
+.success-iprogressbar{
+	text-align: center;
+	font-size: 1.8vw;
+	color: white;	
+	background-color :#5cb85c;
+	height:100%;
+}
+.info-iprogressbar{
+	text-align: center;
+	font-size: 1.8vw;
+	color: white;	
+	background-color :#5bc0de;
+	height:100%;
+}
+.warning-iprogressbar{
+	text-align: center;
+	font-size: 1.8vw;
+	color: white;	
+	background-color :#f0ad4e;
+	height:100%;
+}
+.danger-iprogressbar{
+	text-align: center;
+	font-size: 1.8vw;
+	color: white;	
+	background-color :#d9534f;
+	height:100%;
+}
+.striped-success-iprogressbar{	
+	text-align: center;
+	font-size: 1.8vw;
+	color: white;
+	background-color:#5cb85c;
+	background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-image:-o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-size:40px 40px;
+	height:100%;
+}
+.striped-info-iprogressbar{
+	text-align: center;
+	font-size: 1.8vw;
+	color: white;
+	background-color:#5bc0de;
+	background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-image:-o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-size:40px 40px;
+	height:100%;
+}
+.striped-warning-iprogressbar{
+	text-align: center;
+	font-size: 1.8vw;
+	color: white;
+	background-color:#f0ad4e;
+	background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-image:-o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-size:40px 40px;
+	height:100%;
+}
+.striped-danger-iprogressbar{
+	text-align: center;
+	font-size: 1.8vw;
+	color: white;
+	background-color:#d9534f;
+	background-image:linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-image:-webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-image:-o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+	background-size:40px 40px;
+	height:100%;
+}
+.green-iprogressbar{
+	text-align: center;
+	font-size: 1.8vw;
+	color: white;	
+	background-color :#14D100;
+	height:100%;	
+}
+.blue-iprogressbar{
+	text-align: center;
+	font-size: 1.8vw;
+	color: white;	
+	background-color: #1a82f7;
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#0099FF), to(#1a82f7));
+    background: -webkit-linear-gradient(top, #364395, #1a82f7);
+    background: -o-linear-gradient(top, #364395, #1a82f7);	
+    height:100%;
+}
+

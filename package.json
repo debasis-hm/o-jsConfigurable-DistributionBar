@@ -1,0 +1,23 @@
+{
+  "name": "o-jsconfigurabledistrobar",
+  "version": "1.0.0",
+  "description": "Distrobar that can be configurable through json",
+  "main": ["main.js","main.scss"],
+  "scripts": {
+    "test": "test"
+  },
+  "private":true,
+  "devDependencies":{
+      "gulp":"latest",
+      "origami-build-tools":"latest"
+    },
+  "repository": {
+    "type": "git",
+    "url": "https://devops-tools.pearson.com/stash/projects/DAAXL/repos/o-jsconfigurable-distributionbar/browse"
+  },
+  "keywords": [
+    "Distrobar"
+  ],
+  "author": "debasis satapathy",
+  "license": "ISC"
+}
