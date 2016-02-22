@@ -5,105 +5,60 @@ function origamijsConfigurableDistro_bar(parms) {
 	    db.draw_DistroBar = function(parms){
 
 
-  				if( parms.animationstyle == "o-distroBar"){
+   				if( parms.animationstyle == "o-distroBar"){
 
-							if(parms.progresshtmlElement){
+					let jsonDatalength = parms.dataLabels.length;
 
+					if(jsonDatalength){
 
-								let parentDiv = document.getElementById(parms.progresshtmlElement);
-								let showLabel = parms.showLabel;
+						let index = -1;
 
-								if( Boolean(parms.outerBackgroundInfo.useExistingClass) == true){
-									let clsname = (parms.outerBackgroundInfo.className) ? parms.outerBackgroundInfo.className : "default-outer-o-Distbar";
-									parentDiv.classList.add(clsname);
-								}
-								else{
-									parentDiv.style.border = (parms.outerBackgroundInfo.border) ? parms.outerBackgroundInfo.border : "1px solid #AAA" ;
-									parentDiv.style.borderRadius = (parms.outerBackgroundInfo.borderRadius) ? parms.outerBackgroundInfo.borderRadius : "5px" ;
-									parentDiv.style.backgroundColor = (parms.outerBackgroundInfo.backgroundColor) ? parms.outerBackgroundInfo.backgroundColor : "white" ;
-									parentDiv.style.padding = (parms.outerBackgroundInfo.paddingInbet) ? parms.outerBackgroundInfo.paddingInbet : "1px" ;
-									parentDiv.style.height = (parms.outerBackgroundInfo.height) ? parms.outerBackgroundInfo.height : "38px" ;
-								}
+						setInterval(function() {
+							index++;
+							if(index < jsonDatalength){
 
-								let jsonDatalength = parms.dataLabels.length;
-								if(jsonDatalength){
-									let index = -1;
-									setInterval(function() {
-										index++;
-										if(index<jsonDatalength){
-														
-														let innerDiv = document.createElement("DIV");									
+								let parentDiv = document.getElementById(parms.dataLabels[index].progresshtmlElement);
+								let outerclsinfo = parms.dataLabels[index].outerBackgroundclassName;
+								if(outerclsinfo){parentDiv.classList.add(outerclsinfo);}
 
-														if(Boolean(parms.dataLabels[index].useExistingClass)== true){
-															let clsname = (parms.dataLabels[index].className) ? parms.dataLabels[index].className : "stripedOrange-inner-o-Distbar";
-															innerDiv.classList.add(clsname);
-															innerDiv.style.display = "inline-block";
-															parentDiv.appendChild(innerDiv);
-																	
-														}
-														else{
-															innerDiv.style.backgroundColor = (parms.dataLabels[index].backgroundColor) ? parms.dataLabels[index].backgroundColor : "Green";
-															innerDiv.style.borderRadius = (parms.dataLabels[index].borderRadius) ? parms.dataLabels[index].borderRadius : "5px";
-															innerDiv.style.textColor = (parms.dataLabels[index].textColor) ? parms.dataLabels[index].textColor : "white";
-															innerDiv.style.fontSize = (parms.dataLabels[index].fontsize) ? parms.dataLabels[index].fontsize : "1.8vw";
-															innerDiv.style.textAlign = (parms.dataLabels[index].textAlignmet) ? parms.dataLabels[index].textAlignmet : "center";
-															innerDiv.style.display = "inline-block";
-															innerDiv.style.height = "100%";
-														    parentDiv.appendChild(innerDiv);
-														}
+								let childlength = parms.dataLabels[index].progress.length;
+								let childindex = -1;
+								setInterval(function() {
+									childindex++;
+									if(childindex < childlength){
 
-															let width = 0;
+										let innerDiv = document.createElement("DIV");
+										let innerclsinfo = parms.dataLabels[index].className[childindex];
+										innerDiv.classList.add(innerclsinfo);
+										parentDiv.appendChild(innerDiv);
+										let width = 0;
+										let progressjson = parms.dataLabels[index].progress[childindex];
+										if(progressjson){
 
-															let percentValue = (parms.dataLabels[index].progress) ? parms.dataLabels[index].progress  : width;
-															
-															let animationSpeed = 40;
-
-															if(parms.dataLabels[index].animationSpeed){
-																animationSpeed = parms.dataLabels[index].animationSpeed;
-															}
-
-															if(percentValue){
-
-																let progress = setInterval(function () { 
-																	if (width == percentValue) {
-
-																		 clearInterval(progress);						
-																	}
-																	else{
-																		width++;
-																		innerDiv.style.width = width+ "%";
-																	    if(Boolean(showLabel)==true)
-																	    	{
-																	    		innerDiv.innerHTML = width+ "%";
-																	    	} 
-																	    else{
-																	    	 innerDiv.innerHTML = " .";
-                              											     innerDiv.style.textIndent ="9999px"; 
-																	    }
-																			
-																	}
+											let progress = setInterval(function () { 
+													if (width == progressjson) {
+														 clearInterval(progress);						
+													}
+													else{
+														width++;
+														innerDiv.style.display = "inline-block";
+														innerDiv.style.width = width+ "%";													   
+													    innerDiv.innerHTML = width+ "%";													    	
+													}
 																	    
-															    }, animationSpeed); 
-															}
-													}							
-										}, 50);	
+										     }, 30); 
+										}
 
+									}
+								},10);
 
-								}
-								else{
-
-									let errSpan = "<span>Insufficient Data</span>";
-									parentDiv.innerHTML = errSpan;
-								}
-
-							}else{
-								alert("Html Container is empty !");
 							}
-			
+						},100);
+					}
 				}
 				else {
 
-     				alert("please provide a type .");
+     				console.log("please provide a type .");
 				}
 
 	    };
