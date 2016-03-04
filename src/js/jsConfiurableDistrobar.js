@@ -32,10 +32,10 @@ function origamijsConfigurableDistro_bar(parms) {
 										innerDiv.classList.add(innerclsinfo);
 										parentDiv.appendChild(innerDiv);
 										let width = 0;
-										let progressjson = parms.dataLabels[index].progress[childindex];
-										if(progressjson){
-
-											let progress = setInterval(function () { 
+										let progressjson = Math.round(parms.dataLabels[index].progress[childindex]);
+										if(!progressjson){
+											if(progressjson > 0 && progressjson <=100){
+													let progress = setInterval(function () { 
 													if (width == progressjson) {
 														 clearInterval(progress);						
 													}
@@ -47,6 +47,13 @@ function origamijsConfigurableDistro_bar(parms) {
 													}
 																	    
 										     }, 30); 
+											  }
+											  else
+											  {
+											  	console.log("Invalid data");
+											  }
+
+									
 										}
 
 									}
