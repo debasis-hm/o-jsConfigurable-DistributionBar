@@ -46,7 +46,7 @@ function origamijsConfigurableDistro_bar(parms) {
 													    innerDiv.innerHTML = width+ "%";													    	
 													}
 																	    
-										     }, 30); 
+										     }, 10); 
 											 }
 											else
 											  {
