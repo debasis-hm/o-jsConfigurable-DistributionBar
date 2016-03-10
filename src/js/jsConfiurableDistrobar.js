@@ -13,8 +13,9 @@ function origamijsConfigurableDistro_bar(parms) {
 
 						let index = -1;
 
-						setInterval(function() {
+						var outerprogress = setInterval(function() {
 							index++;
+						    if(index == jsonDatalength ){ clearInterval(outerprogress);}
 							if(index < jsonDatalength){
 
 								let parentDiv = document.getElementById(parms.dataLabels[index].progresshtmlElement);
@@ -23,46 +24,31 @@ function origamijsConfigurableDistro_bar(parms) {
 
 								let childlength = parms.dataLabels[index].progress.length;
 								let childindex = -1;
-								setInterval(function() {
-									childindex++;
-									if(childindex < childlength){
+								var insideprogress = setInterval(function() {
 
+									    childindex++;
+									    if(childlength -childindex   == 1){ clearInterval(insideprogress);}
 										let innerDiv = document.createElement("DIV");
 										let innerclsinfo = parms.dataLabels[index].className[childindex];
 										innerDiv.classList.add(innerclsinfo);
-										parentDiv.appendChild(innerDiv);
-										let width = 0;
-										let progressjson = Math.round(parms.dataLabels[index].progress[childindex]) || 0;
-										if(progressjson >= 0 && progressjson <= 100 ){
-											if(progressjson > 0){
-													let progress = setInterval(function () { 
-													if (width == progressjson) {
-														 clearInterval(progress);						
-													}
-													else{
-														width++;
+										innerDiv.style.width =  "0%";									
+										parentDiv.appendChild(innerDiv);									
+										let progressjson = parms.dataLabels[index].progress[childindex] || 0;
+										if(progressjson >= 0 && progressjson <= 100 ){											
+														
 														innerDiv.style.display = "inline-block";
-														innerDiv.style.width = width+ "%";													   
-													    innerDiv.innerHTML = width+ "%";													    	
-													}
-																	    
-										     }, 10); 
-											 }
-											else
-											  {
-											  	innerDiv.style.width = "0%";	
-											  
-											  }
-
-									
+														innerDiv.style.width = progressjson+ "%";	
+														innerDiv.className += " widthAnimate";													
+														innerDiv.style.animationDuration = '1s';
+													    innerDiv.innerHTML = Math.round(progressjson)+ "%";
 										}
 										else
-											  {
+										{
 											  	innerDiv.style.width = "0%";
 											  	console.log("Invalid data");
-											  }
+										}
 
-									}
+									
 								},10);
 
 							}
