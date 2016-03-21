@@ -34,7 +34,7 @@ function origamijsConfigurableDistro_bar(parms) {
 										innerDiv.style.width =  "0%";									
 										parentDiv.appendChild(innerDiv);									
 										let progressjson = parms.dataLabels[index].progress[childindex] || 0;
-										if(progressjson >= 0 && progressjson <= 100 ){											
+										if(progressjson > 0 && progressjson <= 100 ){											
 														
 														innerDiv.style.display = "inline-block";
 														innerDiv.style.width = progressjson+ "%";	
