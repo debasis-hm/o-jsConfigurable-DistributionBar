@@ -45,6 +45,7 @@ function origamijsConfigurableDistro_bar(parms) {
 										else
 										{
 											  	innerDiv.style.width = "0%";
+											  	innerDiv.style.display = "none";
 											  	console.log("Invalid data");
 										}
 
